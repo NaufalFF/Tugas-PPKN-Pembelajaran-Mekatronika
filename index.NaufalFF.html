@@ -1,0 +1,141 @@
+/project-folder
+  - index.html
+  - style.css
+  - assets/
+      - foto.jpg  (Foto mahasiswa)
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Integrasi Nasional</title>
+          <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+          <!-- Halaman Profil -->
+          <section id="profil">
+              <div class="container">
+                  <h1>Profil Mahasiswa</h1>
+                  <img src="assets/foto.jpg" alt="Foto Mahasiswa" class="foto">
+                  <p><strong>Nama:</strong> Naufal Fachri Febrian</p>
+                  <p><strong>NIM:</strong> 24050630037</p>
+                  <p><strong>Prodi:</strong> Pendidikan Teknik Mekatronika</p>
+                  <button onclick="navigate('materi')">Lihat Materi</button>
+              </div>
+          </section>
+      
+          <!-- Halaman Materi -->
+          <section id="materi" class="hidden">
+              <div class="container">
+                  <h1>Integrasi Nasional: Tanggung Jawab Mahasiswa</h1>
+                  <div class="content">
+                      <h2>Definisi</h2>
+                      <p>Integrasi nasional adalah upaya menyatukan perbedaan dalam suatu negara...</p>
+      
+                      <h2>Peran</h2>
+                      <p>Mahasiswa sebagai agen perubahan memiliki tanggung jawab...</p>
+      
+                      <h2>Prinsip-Prinsip</h2>
+                      <p>Prinsip utama dalam integrasi nasional meliputi...</p>
+      
+                      <h2>Tantangan</h2>
+                      <p>Tantangan integrasi nasional meliputi keberagaman...</p>
+      
+                      <h2>Solusi</h2>
+                      <p>Untuk mengatasi tantangan integrasi nasional, mahasiswa dapat...</p>
+      
+                      <h2>Kesimpulan</h2>
+                      <p>Integrasi nasional adalah tanggung jawab bersama...</p>
+      
+                      <h3>Terima Kasih</h3>
+                  </div>
+                  <button onclick="navigate('profil')">Kembali ke Profil</button>
+              </div>
+          </section>
+      
+          <script>
+              function navigate(sectionId) {
+                  document.querySelectorAll("section").forEach(section => {
+                      section.classList.add("hidden");
+                  });
+                  document.getElementById(sectionId).classList.remove("hidden");
+              }
+          </script>
+      </body>
+      </html>
+      /* Tema Umum */
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #e6f7ff;
+          color: #333;
+      }
+      
+      /* Container */
+      .container {
+          max-width: 800px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+      
+      /* Judul */
+      h1 {
+          font-size: 2.5em;
+          color: #0056b3;
+      }
+      
+      h2 {
+          font-size: 1.8em;
+          color: #007acc;
+          margin-top: 20px;
+      }
+      
+      h3 {
+          font-size: 1.5em;
+          color: #007acc;
+      }
+      
+      /* Paragraf */
+      p {
+          font-size: 1.2em;
+          line-height: 1.6;
+          margin: 15px 0;
+      }
+      
+      /* Foto Mahasiswa */
+      .foto {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          margin: 20px 0;
+          object-fit: cover;
+          border: 3px solid #0056b3;
+      }
+      
+      /* Tombol */
+      button {
+          background-color: #007acc;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1.1em;
+          cursor: pointer;
+          border-radius: 5px;
+          margin-top: 20px;
+          transition: background-color 0.3s ease;
+      }
+      
+      button:hover {
+          background-color: #0056b3;
+      }
+      
+      /* Transisi Halaman */
+      .hidden {
+          display: none;
+      }
+            
